@@ -245,6 +245,7 @@
     .service-card p { font-size: 0.84rem; margin: 0; }
 
     .service-note { margin-top: 12px !important; }
+    a { color: var(--accent-gold-light); text-decoration-color: var(--accent-gold-dim); text-underline-offset: 2px; }
 
     /* Theme toggle */
     .theme-toggle {
@@ -348,68 +349,64 @@
         <span class="app-label">Nur</span>
       </div>
       <h1>Privacy Policy</h1>
-      <p class="effective-date">Effective April 6, 2026</p>
+      <p class="effective-date">Effective November 14, 2026</p>
     </header>
 
     <div class="commitment">
-      <p>Nur does not collect, store, or have access to your personal information. Your location, device data, and preferences never leave your device or reach the developer. The application has no servers, no accounts, and no analytics. It is built to work for you, privately, on your device.</p>
+      <p>Nur does not collect, store, or have access to your personal information. Prayer times and the Qibla direction are calculated on your device, and your location and preferences never reach the developer. The application has no servers, no accounts, and no analytics. The only information that leaves your device is an approximate location, or a city name you search for, sent to Apple Maps to look up place names.</p>
     </div>
 
     <div class="sections">
 
       <div class="section">
         <h2>Introduction</h2>
-        <p>Nur is a minimalist Islamic prayer times and Qibla direction application for iOS. This Privacy Policy describes how the application handles information when you use it. The vast majority of data processing occurs on your device, and the application does not operate any servers that collect or store your personal information.</p>
+        <p>Nur is a minimalist Islamic prayer times and Qibla direction application for iOS. This Privacy Policy describes how the application handles information when you use it. Prayer times, reminders and the Qibla direction are all calculated on your device, and the application does not operate any servers that collect or store your personal information.</p>
       </div>
 
       <div class="section">
         <h2>Information We Collect</h2>
 
         <h3>Location</h3>
-        <p>Nur requests access to your device's location while the app is in use. Your geographic coordinates are used to calculate accurate prayer times for your area and to determine the direction of the Qibla. You may also provide a location manually through the app's search feature, in which case the search query you enter is used in place of your GPS coordinates. Your location is not collected or stored by the developer.</p>
+        <p>If you choose to share it, Nur uses your device's location while the app is in use to calculate prayer times for your area and to determine the direction of the Qibla. Location access is optional: you can instead choose a city, either from a list built into the app or through an online search. Your location is not collected or stored by the developer.</p>
+        <p>So that prayer reminders stay up to date when the app is closed, Nur keeps your last known location on your device, rounded to about one kilometre. It is never transmitted to the developer.</p>
 
         <hr class="row-divider">
-        <h3>Device Motion and Compass</h3>
-        <p>Nur accesses your device's motion sensors and compass heading to display the Qibla compass. This data is processed entirely on your device and is never transmitted to any external server.</p>
+        <h3>Compass</h3>
+        <p>Nur reads your device's compass heading to show when you are facing the Qibla. If Location Services are off, the heading is corrected for your chosen city using a magnetic model built into the app. Compass data is processed entirely on your device and is never transmitted to any external server.</p>
 
         <hr class="row-divider">
         <h3>Preferences and Settings</h3>
-        <p>The app stores your chosen settings locally on your device, including your prayer calculation method, Asr school preference, time format, per-prayer notification settings, time adjustments, display preferences, and any manually saved location. This data is stored using on-device storage and is not synchronized to any cloud service or transmitted to the developer.</p>
+        <p>The app stores your chosen settings locally on your device, including your prayer calculation method, Asr method, time format, per-prayer reminder and snooze settings, your selected city, and up to five recently selected cities. This data is stored using on-device storage and is not synchronized to any cloud service or transmitted to the developer.</p>
 
         <hr class="row-divider">
         <h3>Prayer Times Cache</h3>
-        <p>To reduce unnecessary network requests, the app caches your calculated prayer times locally on your device for the current day. This cache is automatically refreshed each day and when the app returns to the foreground.</p>
+        <p>The app calculates prayer times on your device and caches the current day's times locally, so they don't need to be recalculated each time the app opens. The cache is refreshed each day and whenever your location or settings change.</p>
 
         <hr class="row-divider">
         <h3>Local Notifications</h3>
-        <p>If you enable prayer time reminders, Nur schedules local notifications on your device. All notification data remains on your device and is not sent to any external service.</p>
+        <p>If you enable prayer time reminders, Nur schedules local notifications on your device. iOS may briefly wake the app in the background to keep upcoming reminders accurate; this happens entirely on your device. Notification data is not sent to any external service.</p>
       </div>
 
       <div class="section">
         <h2>How We Use Your Information</h2>
-        <p>Your location is used solely to calculate your daily prayer times and to determine Qibla direction. Your stored preferences are used to present the app in the way you have configured it. No information is used for advertising, profiling, or any purpose beyond the core functionality of the application.</p>
+        <p>Your location is used solely to calculate your daily prayer times, to determine the Qibla direction, and to show the name of your city. Your stored preferences are used to present the app in the way you have configured it. No information is used for advertising, profiling, or any purpose beyond the core functionality of the application.</p>
       </div>
 
       <div class="section">
         <h2>Third-Party Services</h2>
-        <p>Nur communicates with two external services to perform its core functions.</p>
+        <p>Nur uses one external service, Apple Maps, provided by Apple through iOS. Prayer times are not fetched from any server.</p>
 
         <div class="service-card">
-          <div class="service-name">Aladhan API — api.aladhan.com</div>
-          <p>Receives your latitude, longitude, and selected calculation method in order to return your daily prayer times. You can review the Aladhan API's privacy practices at their website.</p>
+          <div class="service-name">Apple Maps (MapKit)</div>
+          <p>When you use your device's location, Nur sends Apple an approximate location, rounded to about one kilometre, to show the name of your city. When you choose a city that needs it, Nur also uses Apple Maps to look up that city's time zone. If you search for a city online, the name you typed is sent to Apple Maps, but only when you tap Search. Suggestions from the city list built into the app never leave your device. Apple's handling of these requests is described in <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
         </div>
 
-        <div class="service-card">
-          <div class="service-name">OpenStreetMap Nominatim — nominatim.openstreetmap.org</div>
-          <p>Used for reverse geocoding — converting your coordinates into a readable location name — and for the location search feature. When you search for a location by name, your search query is sent to this service. Nominatim is operated by the OpenStreetMap Foundation; you can review their privacy policy on their website.</p>
-        </div>
-
-        <p class="service-note">Neither service requires an account or API key, which means neither service has a mechanism to associate requests with an individual user. No other external services receive any data from Nur.</p>
+        <p class="service-note">Nur sends these requests through Apple's built-in iOS services, without any account or identifier belonging to the developer. No other external services receive any data from Nur.</p>
       </div>
 
       <div class="section">
         <h2>Data Sharing and Disclosure</h2>
-        <p>Nur does not sell, trade, or otherwise share your information with third parties, except as described above for the two API services required for the app to function. The developer does not have access to your location, settings, or usage data.</p>
+        <p>Nur does not sell, trade, or otherwise share your information with third parties, except for the Apple Maps requests described above. The developer does not have access to your location, settings, or usage data.</p>
       </div>
 
       <div class="section">
@@ -424,8 +421,8 @@
 
       <div class="section">
         <h2>Your Choices and Rights</h2>
-        <p>You may clear all locally stored settings and preferences at any time through the app's settings screen. Uninstalling the app will remove all locally stored data from your device. Because the developer does not receive or store your personal information, there is no additional data to request deletion of.</p>
-        <p>You may revoke the app's access to your location or motion sensors at any time through your iOS device settings. If location access is revoked, you may continue to use the app by entering a location manually.</p>
+        <p>You can remove recently selected cities at any time from the app's Location settings, and turn prayer reminders off from its Notifications settings. Uninstalling the app removes all locally stored data from your device. Because the developer does not receive or store your personal information, there is no additional data to request deletion of.</p>
+        <p>You can revoke the app's access to your location or notifications at any time in your device's Settings. Without location access, you can keep using the app by choosing a city, and the Qibla direction continues to work.</p>
       </div>
 
       <div class="section">
@@ -441,7 +438,7 @@
     </div>
 
     <footer>
-      <p>Nur &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Effective April 6, 2026</p>
+      <p>Nur &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Effective November 14, 2026</p>
     </footer>
 
   </div>
